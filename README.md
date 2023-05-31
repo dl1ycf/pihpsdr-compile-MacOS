@@ -26,16 +26,16 @@ Simply go to the page
 https://www.xquartz.org/
 
 and install the package file found there (at the time of this writing,
-the file is called XQuarte-2.8.5.pkg which can be down-loaded and
+the file is called `XQuartz-2.8.5.pkg` which can be down-loaded and
 double-clicked).
 
 
 Install the homebrew system
 ---------------------------
 
-I have prepeared a shell script named "homebrew.sh" that installs
+I have prepeared a shell script named `homebrew.sh` that installs
 the homebrew core and all packages that are required to compile piHPSDR.
-In addition, some code from Apple is loaded using the "xcode-select" 
+In addition, some code from Apple is loaded via the the "xcode-select" 
 program.
 
 NOTE M1/M2 Macs:
@@ -47,10 +47,11 @@ may be empty (or even non-existing), but it should not contain sub-folders
 with name include or lib. In this case, we simply can redirect
 using the commands
 
+```
 sudo ln -s /opt/homebrew/include /usr/local/include
-
 sudo ln -s /opt/homebrew/lib     /usr/local/lib
 
+```
 and the WDSP libraries and include files that our compilation produces
 will end up in the right place.
 
@@ -59,7 +60,7 @@ Obtaining the piHPSDR sources
 
 Alongside with piHPSDR, you need the WDSP library which does most of
 the signal processing. Both can be obtained from my github account,
-to facilitate things, a shell script "getit.sh" is provided.
+to facilitate things, a shell script `getit.sh` is provided.
 
 Select features compiled into the program
 -----------------------------------------
@@ -115,7 +116,7 @@ Compiling the program
 ---------------------
 
 After adjusting the Makefile, the program (together with the WDSP library) can be
-compiled using the script "compile.sh". This script will clean up things and
+compiled using the script `compile.sh`. This script will clean up things and
 down-load the latest updates from the internet. As a result, the piHPSDR app 
 should occur on your Desktop.
 
@@ -125,9 +126,11 @@ A note on the shell scripts
 
 This repo contains the shell scripts, namely 
 
-homebrew.sh
-getit.sh
-compile.sh
+```
+ homebrew.sh
+ getit.sh
+ compile.sh
+ ```
 
 The first one installs the "homebrew universe", the second one downloads
 the pihpsdr and WDSP code from the internet, and the last one does
@@ -136,12 +139,15 @@ the compilation.
 You can down-load them to your Desktop, then open a terminal window and
 execute the commands
 
+```
 cd $HOME/Desktop
 chmod 755 homebrew.sh getit.sh compile.sh
+```
 
 After that, you can execute e.g. the first script using (still in the terminal window)
 the commands
 
+```
 cd $HOME/Desktop
 ./homebrew.sh
 
