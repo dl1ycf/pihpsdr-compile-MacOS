@@ -71,24 +71,26 @@ FEATURE_INCLUDE=FEATURE
 
 in $HOME/pihpsdr/Makefile. If the line is as shown above, the feature
 is activated. To de-activate such a feature, insert a '#' character
-in the first column of that line.
+in the first column of that line. The main reasons to make these features
+"user selectable" is that they might depend on external libraries e.g.
+which are or are not available on a given target system.
 
 GPIO
-----
+
 This feature is meant for RaspberryPi computers. There is support to 
 connect push-buttons/encoders to the GPIO. On MacOS, there is no GPIO
 so this feature is no active no matter what you do with this line, so
 simply don't care.
 
 STEMLAB
--------
+
 The program can detect a RedPitaya, start the SDR application through the web
 interface, and then start the radio. You need to type in the IP address of the
 RedPitaya once (it is remembered), so the best is to give the RedPitaya a
 fixed IP address.
 
 MIDI  
-----
+
 The program can be controlled by a MIDI console attached to the Macintosh.
 I use the Behringer PL-1 and this makes much fun. Meanwhile this has also
 been tested with a Behringer Studio2a and with a Hercules DJcompact console.
@@ -96,7 +98,7 @@ The MIDI documentation can be found in the github.com/dl1ycf/piHPSDR repository
 with the sub-directory release/pihpsdr.
 
 SOAPYSDR
---------
+
 Ability to use SDR hardware connected via the SoapySDR lib. I have tested this
 with the Adalm Pluto connected via an USB cable to the Macintosh, the only
 SoapySDR-supported hardware that I have. Other SoapySDR hardware
