@@ -48,6 +48,7 @@ with name include or lib. In this case, we simply can redirect
 using the commands
 
 sudo ln -s /opt/homebrew/include /usr/local/include
+
 sudo ln -s /opt/homebrew/lib     /usr/local/lib
 
 and the WDSP libraries and include files that our compilation produces
