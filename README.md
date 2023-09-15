@@ -1,5 +1,10 @@
 # How to compile piHPSDR on MacOS
 
+A much improved installation procedure is now available in the
+repo github.com/dl1ycf/pihpdsr. It is explained in the new
+manual which can be found there in the release/LatexManual 
+directory.  No further updates will be done HERE.
+
 May 31, 2023
 ------------
 
